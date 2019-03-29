@@ -48,12 +48,17 @@ class ImageViewerFrame extends JFrame
         JMenuBar menuBar = new JMenuBar();
         setJMenuBar(menuBar);
 
+        // 给menuBar上面增加 按钮选项
         JMenu menu = new JMenu("File");
         menuBar.add(menu);
 
+        JMenu option = new JMenu("Option");
+        menuBar.add(option);
 
+        // 这是给 “File”按钮添加按钮项目
         JMenuItem openItem = new JMenuItem("Open");
-        menu.add(openItem);
+        menu.add(openItem); // menu 只是调用定义好的Item
+        // option.add(openItem); 这个Item也可以被别的调用
         openItem.addActionListener(event ->{
             // show file chooser dialog
                int result = chooser.showOpenDialog(null);
