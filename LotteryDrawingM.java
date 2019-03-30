@@ -23,7 +23,7 @@ public class LotteryDrawingM
         int[] result = new int[k];
         for (i=0;i<result.length;i++)
             {
-                int r = (int)Math.random*n;
+                int r = (int)(Math.random()*n);
 
                 /** 以下两步保证随机取数不重复
                 *   搜索“洗牌问题”
