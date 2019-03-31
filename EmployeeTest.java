@@ -3,7 +3,7 @@ import java.time.*;
 /**
   * Thsi program tests the Employee class.
   */
-
+// 方法中要返回一个可变数据域的拷贝，就应该用clone();
 public class EmployeeTest
 {
     public static void main(String[] args)
@@ -21,18 +21,20 @@ public class EmployeeTest
 
         // print out information about all Employee objects
         for (Employee e : staff)
-            System.out.println("name = " + getName() + ",salary = " + e.getSalary() + ",hireDay ="
-                + e.getHireDay());
+            System.out.println("name = " + e.getName() + ",salary = " + e.getSalary() + ",hireDay ="
+            + e.getHireDay());
 
     }
 }
 
 class Employee
 {
+    // instance fields
     private String name;
     private double salary;
     private LocalDate hireDay;
 
+    // constructor,构造函数，必须与类同名
     public Employee(String n,double s,int year,int month,int day)
     {
         name = n;
@@ -40,16 +42,33 @@ class Employee
         hireDay = LocalDate.of(year,month,day);
     }
 
+    // method
     public String getName()
     {
         return name;
     }
 
-    public LocalDate getHireDay()
+    // method
+    public double getSalary()
     {
-        return hireDay;
+        return salary;
     }
 
+/**
+ * 不要编写返回引用可变对象的访问器方法；
+ * 这里hireDay是Date类，属于可修改对象；违反了此原则
+ */
+    // method
+    // public LocalDate getHireDay()
+    // {
+    //     return hireDay;  // bad
+    // }
+    public LocalDate getHireDay()
+    {
+        return hireDay.clone();
+    }
+
+    // more method
     public void raiseSalary(double byPercent)
     {
         double raise = salary * byPercent / 100;
