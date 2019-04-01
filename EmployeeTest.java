@@ -54,19 +54,13 @@ class Employee
         return salary;
     }
 
-/**
- * 不要编写返回引用可变对象的访问器方法；
- * 这里hireDay是Date类，属于可修改对象；违反了此原则
- */
+
     // method
-    // public LocalDate getHireDay()
-    // {
-    //     return hireDay;  // bad
-    // }
     public LocalDate getHireDay()
     {
-        return hireDay.clone();
+        return hireDay;  
     }
+
 
     // more method
     public void raiseSalary(double byPercent)
