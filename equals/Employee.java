@@ -61,6 +61,7 @@ public class Employee
         return Objects.hash(name,salary,hireDay);
     }
 
+    // 此函数功能：Descriptions
     public String toString()
     {
         return getClass().getName() + "[name="+ name + ",salary=" + salary + ",hireDay="+ hireDay +"]";
