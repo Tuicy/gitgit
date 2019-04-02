@@ -13,10 +13,10 @@ public class Employee
     {
         this.name = name;
         this.salary = salary;
-        hireDay =LocalDate(year,month,day);
+        hireDay = LocalDate(year,month,day);
     }
 
-    public String getName();
+    public String getName()
     {
         return name;
     }
@@ -52,7 +52,7 @@ public class Employee
         Employee other = (Employee) otherObject;
 
         // test whether the fields have identical values
-        return Objects.equals(name,other..name)&& salary == other.salary
+        return Objects.equals(name,othername)&& salary == other.salary
         && Objects.equals(hireDay,other.hireDay);
     }
 

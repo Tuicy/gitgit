@@ -9,7 +9,7 @@ import java.time.*;
 public class Employee
 {
     private String name;
-    privatedouble salary;
+    private double salary;
     private LocalDate hireDay;
 
     public Employee(String name,double salary,int year,int month,int day)

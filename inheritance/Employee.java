@@ -1,6 +1,6 @@
 package inheritance;
 
-import java.time.*；
+import java.time.*;
 
 public class Employee
 {

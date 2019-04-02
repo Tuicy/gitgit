@@ -16,7 +16,7 @@ public class Employee extends Person
 
     public double getSalary()
     {
-        return Salary;
+        return salary;
     }
 
     public LocalDate getHireDay()
