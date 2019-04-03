@@ -66,7 +66,4 @@ public class Employee
     {
         return getClass().getName() + "[name="+ name + ",salary=" + salary + ",hireDay="+ hireDay +"]";
     }
-
-
-
 }

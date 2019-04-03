@@ -15,10 +15,13 @@ public class TimerTest
 
         // construct a timer that calls the listener
         // once every 10 seconds
+        // 构造定时器
         Timer t = new Timer(10000,listener);
+        // 启动定时器
         t.start();
 
         JOptionPane.showMessageDialog(null,"Quit program?");
+        // 停止定时器 t.stop();
         System.exit(0);
     }
 }

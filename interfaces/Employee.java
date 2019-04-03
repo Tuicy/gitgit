@@ -1,5 +1,9 @@
 package interfaces;
 
+/* implements必须实现接口中的方法
+ *
+ *
+ */
 public class Employee implements Comparable<Employee>
 {
     private String name;
